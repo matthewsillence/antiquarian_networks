@@ -1,0 +1,336 @@
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column ﻿Surname by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname"
+        }
+      ]
+    },
+    "columnName": "﻿Surname",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": true,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column First Name",
+    "columnName": "First Name"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Title",
+    "columnName": "Title"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Affiliation",
+    "columnName": "Affiliation"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Location",
+    "columnName": "Location"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Notes",
+    "columnName": "Notes"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ﻿Surname 2 to firstname",
+    "oldColumnName": "﻿Surname 2",
+    "newColumnName": "firstname"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ﻿Surname 1 to name",
+    "oldColumnName": "﻿Surname 1",
+    "newColumnName": "name"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ﻿Surname 3 to title",
+    "oldColumnName": "﻿Surname 3",
+    "newColumnName": "title"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ﻿Surname 4 to address",
+    "oldColumnName": "﻿Surname 4",
+    "newColumnName": "address"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column test at index 2 based on column firstname using expression grel:value.split(\"Rev.\")[1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname 1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname 1"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        }
+      ]
+    },
+    "newColumnName": "test",
+    "columnInsertIndex": 2,
+    "baseColumnName": "firstname",
+    "expression": "grel:value.split(\"Rev.\")[1]",
+    "onError": "keep-original"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column firstname using expression grel:value.replace(\"Rev.\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname 1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname 1"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        },
+        {
+          "mode": "text",
+          "invert": false,
+          "caseSensitive": false,
+          "query": "Rev.",
+          "name": "firstname",
+          "type": "text",
+          "columnName": "firstname"
+        }
+      ]
+    },
+    "columnName": "firstname",
+    "expression": "grel:value.replace(\"Rev.\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column firstname using expression grel:value.replace(value,\"Rev.\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "﻿Surname 1",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "﻿Surname 1"
+        },
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        },
+        {
+          "mode": "text",
+          "invert": false,
+          "caseSensitive": false,
+          "query": "Rev.",
+          "name": "firstname",
+          "type": "text",
+          "columnName": "firstname"
+        },
+        {
+          "omitError": false,
+          "expression": "grel:value.replace(value,\"Rev.\")",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Rev.",
+                "l": "Rev."
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "firstname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "firstname"
+        }
+      ]
+    },
+    "columnName": "firstname",
+    "expression": "grel:value.replace(value,\"Rev.\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
