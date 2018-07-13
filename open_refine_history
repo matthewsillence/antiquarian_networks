@@ -332,5 +332,194 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column firstname using expression grel:value.replace(value, \"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "grel:value == cells[\"test\"].value replace.value(\"true\",\"\")",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "firstname",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "firstname"
+        }
+      ]
+    },
+    "columnName": "firstname",
+    "expression": "grel:value.replace(value, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column firstname to title1",
+    "oldColumnName": "firstname",
+    "newColumnName": "title1"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column test to firstname",
+    "oldColumnName": "test",
+    "newColumnName": "firstname"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column title to title2",
+    "oldColumnName": "title",
+    "newColumnName": "title2"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column name using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        }
+      ]
+    },
+    "columnName": "name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column address using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        }
+      ]
+    },
+    "columnName": "address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column title1 to position 2",
+    "columnName": "title1",
+    "index": 2
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column address using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        }
+      ]
+    },
+    "columnName": "address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column title2 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "name"
+        }
+      ]
+    },
+    "columnName": "title2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
   }
 ]
