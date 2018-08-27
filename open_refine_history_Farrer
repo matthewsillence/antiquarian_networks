@@ -1,0 +1,169 @@
+[
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Antiquaries, Socioty of. to surname",
+    "oldColumnName": "Antiquaries, Socioty of.",
+    "newColumnName": "surname"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column surname to name",
+    "oldColumnName": "surname",
+    "newColumnName": "name"
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column name by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "name",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 2 to firstname",
+    "oldColumnName": "name 2",
+    "newColumnName": "firstname"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 3 to title1",
+    "oldColumnName": "name 3",
+    "newColumnName": "title1"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 4 to title2",
+    "oldColumnName": "name 4",
+    "newColumnName": "title2"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 5 to address",
+    "oldColumnName": "name 5",
+    "newColumnName": "address"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 6 to place",
+    "oldColumnName": "name 6",
+    "newColumnName": "place"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column name 7 to copies",
+    "oldColumnName": "name 7",
+    "newColumnName": "copies"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column name 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "name 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column name 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "name 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column firstname using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "firstname",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column title1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "title1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column title2 using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "title2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column address using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column place using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "place",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column copies using expression value.trim()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "copies",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
