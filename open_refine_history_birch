@@ -1,0 +1,15 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column Month at index 1 based on column full_date using expression grel:value.split(\".\")[1]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Month",
+    "columnInsertIndex": 1,
+    "baseColumnName": "full_date",
+    "expression": "grel:value.split(\".\")[1]",
+    "onError": "keep-original"
+  }
+]
