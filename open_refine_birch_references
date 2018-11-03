@@ -1,0 +1,93 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Coordinates using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Coordinates",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Coordinates by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Coordinates",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Coordinates 1 to Latitude",
+    "oldColumnName": "Coordinates 1",
+    "newColumnName": "Latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Coordinates 2 to Longitude",
+    "oldColumnName": "Coordinates 2",
+    "newColumnName": "Longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column to Notes",
+    "oldColumnName": "Column",
+    "newColumnName": "Notes"
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Letter_ID by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Letter_ID",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ".",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Letter_ID 1 to Year",
+    "oldColumnName": "Letter_ID 1",
+    "newColumnName": "Year"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Letter_ID 2 to Month",
+    "oldColumnName": "Letter_ID 2",
+    "newColumnName": "Month"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Letter_ID 3 to Day",
+    "oldColumnName": "Letter_ID 3",
+    "newColumnName": "Day"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Letter_ID 4 to Photo_number",
+    "oldColumnName": "Letter_ID 4",
+    "newColumnName": "Photo_number"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Photo_number to Photo_reference",
+    "oldColumnName": "Photo_number",
+    "newColumnName": "Photo_reference"
+  }
+]
