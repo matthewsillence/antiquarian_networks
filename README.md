@@ -1,5 +1,5 @@
 # antiquarian_networks
-Using OCR data from digitised books to extract personal and institutional names and associations as a basis for social network analysis.
+Using OCR data from digitised books and periodicals to extract personal and institutional names and associations, and subject and location interests, as a basis for analysis of scholarly networks.
 
 ## Why use Open Refine for digitised texts?
 For historians who have been using the site https://archive.org/ to access full texts of nineteenth-century antiquarian literature, it is clear that there is a vast repository of texts that could be mined in different ways, isolating different parts of a book for analysis.
